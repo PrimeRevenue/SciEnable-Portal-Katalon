@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_Phone</name>
+   <tag></tag>
+   <elementGuidId>f5a6b7c8-d9e0-4f5a-8b78-273940152840</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#rampsite_registration_phone</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>#rampsite_registration_phone</value>
+      <webElementGuid>f5a6b7c8-d9e0-4f5a-8b78-273940152841</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

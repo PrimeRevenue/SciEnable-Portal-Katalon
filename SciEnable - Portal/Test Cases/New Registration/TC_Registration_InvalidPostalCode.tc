@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_Registration_InvalidPostalCode</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f647e9aa-34ed-480c-ba25-12f5a78afbe6</testCaseGuid>
+</TestCaseEntity>

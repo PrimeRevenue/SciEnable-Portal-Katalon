@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_DesiredProgram</name>
+   <tag></tag>
+   <elementGuidId>f9a0b1c2-d3e4-4f9a-8b12-152840951273</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#rampsite_registration_desired_rampsites</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>#rampsite_registration_desired_rampsites</value>
+      <webElementGuid>f9a0b1c2-d3e4-4f9a-8b12-152840951274</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

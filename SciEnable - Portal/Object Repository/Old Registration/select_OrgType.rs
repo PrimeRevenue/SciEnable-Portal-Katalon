@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_OrgType</name>
+   <tag></tag>
+   <elementGuidId>d7e8f9a0-b1c2-4d7e-8f90-102152840951</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#rampsite_registration_organization_type_id</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>#rampsite_registration_organization_type_id</value>
+      <webElementGuid>d7e8f9a0-b1c2-4d7e-8f90-102152840952</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

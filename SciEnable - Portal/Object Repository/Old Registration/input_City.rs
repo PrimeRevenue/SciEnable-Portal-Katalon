@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_City</name>
+   <tag></tag>
+   <elementGuidId>f3a4b5c6-d7e8-4f3a-8b4c-5d6e7f809103</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#rampsite_registration_city</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>#rampsite_registration_city</value>
+      <webElementGuid>f3a4b5c6-d7e8-4f3a-8b4c-5d6e7f809104</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_PostalCode</name>
+   <tag></tag>
+   <elementGuidId>b5c6d7e8-f9a0-4b5c-8d6e-7f8091021527</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#rampsite_registration_postal_code</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>#rampsite_registration_postal_code</value>
+      <webElementGuid>b5c6d7e8-f9a0-4b5c-8d6e-7f8091021528</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

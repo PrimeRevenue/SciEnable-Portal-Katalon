@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_CompanyLegalName</name>
+   <tag></tag>
+   <elementGuidId>d1e2f3a4-b5c6-4d1e-8f2a-3b4c5d6e7f80</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#rampsite_registration_company_name</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>#rampsite_registration_company_name</value>
+      <webElementGuid>d1e2f3a4-b5c6-4d1e-8f2a-3b4c5d6e7f81</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

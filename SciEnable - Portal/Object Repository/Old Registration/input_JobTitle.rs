@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_JobTitle</name>
+   <tag></tag>
+   <elementGuidId>d3e4f5a6-b7c8-4d3e-8f56-384516273940</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#rampsite_registration_job_title</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>#rampsite_registration_job_title</value>
+      <webElementGuid>d3e4f5a6-b7c8-4d3e-8f56-384516273941</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

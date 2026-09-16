@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Old registration UI (scienable-reg.aws.primerevenue.com/register/outlook) happy path, mirrors SE-15096 data — built for old-vs-new comparison.</description>
+   <name>TC_Registration_HappyPath_OldUI</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c1d2e3f4-a5b6-4c1d-8e2f-3a4b5c6d7e8f</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_Fax</name>
+   <tag></tag>
+   <elementGuidId>a6b7c8d9-e0f1-4a6b-9c89-394015284095</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#rampsite_registration_fax</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>#rampsite_registration_fax</value>
+      <webElementGuid>a6b7c8d9-e0f1-4a6b-9c89-394015284096</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

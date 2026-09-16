@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_Address1</name>
+   <tag></tag>
+   <elementGuidId>e2f3a4b5-c6d7-4e2f-9a3b-4c5d6e7f8091</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#rampsite_registration_address</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>#rampsite_registration_address</value>
+      <webElementGuid>e2f3a4b5-c6d7-4e2f-9a3b-4c5d6e7f8092</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

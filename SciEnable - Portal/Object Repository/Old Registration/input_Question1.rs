@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_Question1</name>
+   <tag></tag>
+   <elementGuidId>a0b1c2d3-e4f5-4a0b-9c23-284095162384</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>[id="custom_question[658]"]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>[id="custom_question[658]"]</value>
+      <webElementGuid>a0b1c2d3-e4f5-4a0b-9c23-284095162385</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

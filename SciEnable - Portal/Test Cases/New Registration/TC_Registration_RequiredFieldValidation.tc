@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_Registration_RequiredFieldValidation</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e6fa5c2b-8753-48c2-9a8b-51afbc2f5406</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Currency</name>
+   <tag></tag>
+   <elementGuidId>e8f9a0b1-c2d3-4e8f-9a01-215284095162</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#rampsite_registration_currency</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>#rampsite_registration_currency</value>
+      <webElementGuid>e8f9a0b1-c2d3-4e8f-9a01-215284095163</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>
