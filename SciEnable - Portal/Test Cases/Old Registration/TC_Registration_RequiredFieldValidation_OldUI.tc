@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Old UI shows inline error text per field on blank Submit (confirmed live 9/17/2026, matches Lejla's screenshots). Contrast with new UI, which disables the button instead — see TC_Registration_RequiredFieldValidation.
+
+Note: "Desired Program" is marked required (*) but shows no error when left blank — not asserted here since there's nothing to check, but worth flagging as a possible gap in the old UI itself.</description>
+   <name>TC_Registration_RequiredFieldValidation_OldUI</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f1a2b3c4-d5e6-4f1a-8b34-627394015284</testCaseGuid>
+</TestCaseEntity>

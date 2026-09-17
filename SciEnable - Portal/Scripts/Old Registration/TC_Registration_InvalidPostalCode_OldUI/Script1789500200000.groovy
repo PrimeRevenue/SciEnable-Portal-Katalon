@@ -20,20 +20,13 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser(null)
 
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
+WebUI.navigateToUrl(GlobalVariable.oldUiBaseUrl)
 
-// New UI has no inline "required" error text — it disables Next/Submit
-// instead until all required fields are filled. Confirmed live 9/17/2026.
-WebUI.verifyElementNotClickable(findTestObject('Page_Portal Web/button_Next'))
+// Blank case
+WebUI.click(findTestObject('Old Registration/button_Submit'))
 
-WebUI.setText(findTestObject('Page_Portal Web/input_First Name'), 'Smoke')
+WebUI.verifyTextPresent("zip code can't be blank", false)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Last Name'), 'Test')
-
-WebUI.setText(findTestObject('Page_Portal Web/input_Email'), 'smoketest@gmail.com')
-
-WebUI.setText(findTestObject('Page_Portal Web/input_Job Title'), 'QA')
-
-WebUI.setText(findTestObject('Page_Portal Web/input_Phone Number'), '1234567898')
-
-WebUI.verifyElementClickable(findTestObject('Page_Portal Web/button_Next'))
+// Max length is enforced via HTML maxlength attribute, not a triggered
+// error — verify the attribute itself rather than trying to type past it.
+WebUI.verifyElementAttributeValue(findTestObject('Old Registration/input_PostalCode'), 'maxlength', '15', 10)

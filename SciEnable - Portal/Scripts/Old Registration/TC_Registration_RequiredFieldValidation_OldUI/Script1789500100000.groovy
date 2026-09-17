@@ -20,20 +20,36 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser(null)
 
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
+WebUI.navigateToUrl(GlobalVariable.oldUiBaseUrl)
 
-// New UI has no inline "required" error text — it disables Next/Submit
-// instead until all required fields are filled. Confirmed live 9/17/2026.
-WebUI.verifyElementNotClickable(findTestObject('Page_Portal Web/button_Next'))
+WebUI.click(findTestObject('Old Registration/button_Submit'))
 
-WebUI.setText(findTestObject('Page_Portal Web/input_First Name'), 'Smoke')
+WebUI.verifyTextPresent("Company Legal name can't be blank", false)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Last Name'), 'Test')
+WebUI.verifyTextPresent('Please submit a physical address. PO Boxes are not supported.', false)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Email'), 'smoketest@gmail.com')
+WebUI.verifyTextPresent("City can't be blank", false)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Job Title'), 'QA')
+WebUI.verifyTextPresent('Please select a country.', false)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Phone Number'), '1234567898')
+WebUI.verifyTextPresent('Please select a state.', false)
 
-WebUI.verifyElementClickable(findTestObject('Page_Portal Web/button_Next'))
+WebUI.verifyTextPresent("zip code can't be blank", false)
+
+WebUI.verifyTextPresent('Please select an incorporation country.', false)
+
+WebUI.verifyTextPresent('Please select an incorporation type.', false)
+
+WebUI.verifyTextPresent('Please select a currency.', false)
+
+WebUI.verifyTextPresent('Required field', false)
+
+WebUI.verifyTextPresent('Please enter your first name', false)
+
+WebUI.verifyTextPresent('Please enter your last name', false)
+
+WebUI.verifyTextPresent('Please enter your job title.', false)
+
+WebUI.verifyTextPresent('Please enter a valid email', false)
+
+WebUI.verifyTextPresent('Please enter a valid phone number with digits from 0-9+-.@#$&()', false)

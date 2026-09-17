@@ -13,7 +13,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Old registration UI — not applicable in QA1, leave blank unless confirmed otherwise</description>
-      <initValue>''</initValue>
+      <initValue>'https://scienable-reg.aws.primerevenue.com/register/outlook'</initValue>
       <name>oldUiBaseUrl</name>
       <protected>false</protected>
       <valueType>STRING</valueType>

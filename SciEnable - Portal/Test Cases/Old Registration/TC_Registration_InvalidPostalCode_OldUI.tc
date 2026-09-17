@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verifies old UI's postal code rules (confirmed live 9/17/2026):
+- Blank + Submit shows "zip code can't be blank"
+- Field has maxlength="15" HTML attribute — this caps input directly rather
+  than triggering an error message, so ">15 characters" can't actually be
+  entered through normal typing. "Maximum 15 characters" in the UI is a
+  static hint, not a dynamically-triggered error.
+
+Contrast with new UI, which enforces neither the blank check via error text
+(uses disabled button instead) nor any max length at all — see
+TC_Registration_InvalidPostalCode.</description>
+   <name>TC_Registration_InvalidPostalCode_OldUI</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a2b3c4d5-e6f7-4a2b-9c45-738405162839</testCaseGuid>
+</TestCaseEntity>

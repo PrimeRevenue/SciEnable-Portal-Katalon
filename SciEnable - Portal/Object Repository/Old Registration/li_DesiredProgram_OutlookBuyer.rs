@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>li_DesiredProgram_OutlookBuyer</name>
+   <tag></tag>
+   <elementGuidId>d9e0f1a2-b3c4-4d9e-8f12-409516273940</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//ul[@class='chosen-results']/li[normalize-space(text())='OutlookBuyer']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//ul[@class='chosen-results']/li[normalize-space(text())='OutlookBuyer']</value>
+      <webElementGuid>d9e0f1a2-b3c4-4d9e-8f12-409516273941</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

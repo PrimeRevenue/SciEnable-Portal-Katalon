@@ -110,5 +110,3 @@ WebUI.click(findTestObject('Page_Portal Web/button_Submit'))
 
 WebUI.verifyElementPresent(findTestObject('Page_Portal Web/text_RegistrationSubmitted'), 10)
 
-
-

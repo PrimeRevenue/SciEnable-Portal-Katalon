@@ -34,13 +34,15 @@ WebUI.setText(findTestObject('Old Registration/input_PostalCode'), '201307')
 
 WebUI.selectOptionByLabel(findTestObject('Old Registration/select_OrgCountry'), 'India', false)
 
-WebUI.delay(1)
+WebUI.delay(2)
 
-WebUI.selectOptionByLabel(findTestObject('Old Registration/select_OrgType'), 'Corporation', false)
+WebUI.selectOptionByLabel(findTestObject('Old Registration/select_OrgType'), 'General Partnership', false)
 
 WebUI.selectOptionByLabel(findTestObject('Old Registration/select_Currency'), 'US Dollar', false)
 
-WebUI.selectOptionByLabel(findTestObject('Old Registration/select_DesiredProgram'), 'OutlookBuyer', false)
+WebUI.click(findTestObject('Old Registration/input_DesiredProgramSearch'))
+
+WebUI.click(findTestObject('Old Registration/li_DesiredProgram_OutlookBuyer'))
 
 WebUI.setText(findTestObject('Old Registration/input_Question1'), 'Test')
 
@@ -57,3 +59,5 @@ WebUI.setText(findTestObject('Old Registration/input_Phone'), '1234567898')
 WebUI.setText(findTestObject('Old Registration/input_Fax'), '1234567')
 
 WebUI.click(findTestObject('Old Registration/button_Submit'))
+
+WebUI.verifyElementPresent(findTestObject('Old Registration/text_RegistrationConfirmation'), 10)
