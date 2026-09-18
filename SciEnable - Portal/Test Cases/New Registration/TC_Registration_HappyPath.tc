@@ -2,7 +2,9 @@
 <TestCaseEntity>
    <description>Full valid submission → confirmation page (baseline, mirrors SE-15096)&#xd;
 Submission with each supported country selected (if country list changed)&#xd;
-Submission via each entry point/buyer program if multiple exist</description>
+Submission via each entry point/buyer program if multiple exist&#xd;
+&#xd;
+9/18/2026: fixed recurring ElementClickInterceptedException on the Org Type → Question 11 transition. Fixed-duration WebUI.delay() calls after each MUI Autocomplete selection were unreliable (worked sometimes, failed intermittently at the same step across multiple runs) because the listbox close animation doesn't complete in a consistent amount of time. Replaced every delay with WebUI.waitForElementNotPresent() on that specific listbox's ul#registration-{field}-listbox, which waits for the actual DOM state rather than guessing a duration. General lesson: prefer explicit element-state waits over WebUI.delay() for any UI with animated transitions.</description>
    <name>TC_Registration_HappyPath</name>
    <tag></tag>
    <comment></comment>

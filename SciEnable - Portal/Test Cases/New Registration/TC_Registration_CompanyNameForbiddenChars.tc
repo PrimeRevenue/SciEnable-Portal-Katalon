@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>KNOWN GAP (confirmed live 9/16/2026): entered "Test:Company;Name|Bad" into the new UI's Company Name field — no error appeared, even after attempting Submit. The old UI blocks ~ : ; | in this field. Not automated here since there's no actual validation to assert against — needs to be reported/fixed on the product side. See TC_Registration_CompanyNameForbiddenChars_OldUI for the equivalent old UI test, which IS enforced.</description>
+   <name>TC_Registration_CompanyNameForbiddenChars</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c4d5e6f7-a8b9-4c4d-8e67-950627384051</testCaseGuid>
+</TestCaseEntity>

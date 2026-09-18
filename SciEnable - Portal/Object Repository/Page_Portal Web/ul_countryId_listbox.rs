@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>ul_countryId_listbox</name>
+   <tag></tag>
+   <elementGuidId>d4e5f6a7-b8c9-4d4e-8f01-627384950162</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>ul#registration-countryId-listbox</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>ul#registration-countryId-listbox</value>
+      <webElementGuid>d4e5f6a7-b8c9-4d4e-8f01-627384950163</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

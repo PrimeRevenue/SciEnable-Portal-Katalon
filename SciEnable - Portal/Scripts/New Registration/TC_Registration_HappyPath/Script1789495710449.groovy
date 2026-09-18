@@ -52,7 +52,7 @@ WebUI.mouseOver(findTestObject('Page_Portal Web/li_registration-countryId-option
 
 WebUI.click(findTestObject('Page_Portal Web/li_registration-countryId-option-0'))
 
-WebUI.delay(1)
+WebUI.waitForElementNotPresent(findTestObject('Page_Portal Web/ul_countryId_listbox'), 5)
 
 WebUI.click(findTestObject('Page_Portal Web/svg_MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cs'))
 
@@ -60,7 +60,7 @@ WebUI.mouseOver(findTestObject('Page_Portal Web/li_registration-stateId-option-0
 
 WebUI.click(findTestObject('Page_Portal Web/li_registration-stateId-option-0'))
 
-WebUI.delay(1)
+WebUI.waitForElementNotPresent(findTestObject('Page_Portal Web/ul_stateId_listbox'), 5)
 
 WebUI.setText(findTestObject('Page_Portal Web/input_Enter city'), 'Atlanta')
 
@@ -72,7 +72,7 @@ WebUI.mouseOver(findTestObject('Page_Portal Web/li_registration-organizationCoun
 
 WebUI.click(findTestObject('Page_Portal Web/li_registration-organizationCountryId-option-0'))
 
-WebUI.delay(1)
+WebUI.waitForElementNotPresent(findTestObject('Page_Portal Web/ul_organizationCountryId_listbox'), 5)
 
 WebUI.click(findTestObject('Page_Portal Web/svg_MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cs_2'))
 
@@ -80,7 +80,7 @@ WebUI.mouseOver(findTestObject('Page_Portal Web/li_registration-organizationStat
 
 WebUI.click(findTestObject('Page_Portal Web/li_registration-organizationStateId-option-0'))
 
-WebUI.delay(1)
+WebUI.waitForElementNotPresent(findTestObject('Page_Portal Web/ul_organizationStateId_listbox'), 5)
 
 WebUI.click(findTestObject('Page_Portal Web/svg_MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cs_3'))
 
@@ -88,9 +88,11 @@ WebUI.mouseOver(findTestObject('Page_Portal Web/li_registration-organizationType
 
 WebUI.click(findTestObject('Page_Portal Web/li_registration-organizationTypeId-option-0'))
 
-WebUI.delay(1)
+WebUI.waitForElementNotPresent(findTestObject('Page_Portal Web/ul_organizationTypeId_listbox'), 5)
 
 WebUI.click(findTestObject('Page_Portal Web/div_Tax ID_Company Name_Address_ZIP_Postal Co'))
+
+WebUI.waitForElementNotPresent(findTestObject('Page_Portal Web/ul_organizationTypeId_listbox'), 5)
 
 WebUI.click(findTestObject('Page_Portal Web/svg_MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cs_4'))
 

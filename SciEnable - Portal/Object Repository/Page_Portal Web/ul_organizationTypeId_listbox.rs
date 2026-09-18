@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>ul_organizationTypeId_listbox</name>
+   <tag></tag>
+   <elementGuidId>b8c9d0e1-f2a3-4b8c-8d45-062738495016</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>ul#registration-organizationTypeId-listbox</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>ul#registration-organizationTypeId-listbox</value>
+      <webElementGuid>b8c9d0e1-f2a3-4b8c-8d45-062738495017</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

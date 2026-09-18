@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verifies old UI rejects forbidden characters (~ : ; |) in Company Legal Name, triggered dynamically on blur (confirmed live 9/17/2026). Contrast with new UI, which does not enforce this at all — see TC_Registration_CompanyNameForbiddenChars.</description>
+   <name>TC_Registration_CompanyNameForbiddenChars_OldUI</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b3c4d5e6-f7a8-4b3c-9d56-849516273940</testCaseGuid>
+</TestCaseEntity>

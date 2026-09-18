@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>ul_stateId_listbox</name>
+   <tag></tag>
+   <elementGuidId>e5f6a7b8-c9d0-4e5f-9a12-738495016273</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>ul#registration-stateId-listbox</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>ul#registration-stateId-listbox</value>
+      <webElementGuid>e5f6a7b8-c9d0-4e5f-9a12-738495016274</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>
