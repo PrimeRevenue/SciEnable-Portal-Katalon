@@ -20,24 +20,31 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser(null)
 
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
+// Step 1: React portal URL, flagged-off supplier — shell chrome (app-switch tabs) must NOT appear
+WebUI.navigateToUrl(GlobalVariable.reactPortalBaseUrl)
 
-// New UI has no inline "required" error text — it disables Next/Submit
-// instead until all required fields are filled. Confirmed live 9/17/2026.
-WebUI.verifyElementNotClickable(findTestObject('Page_Portal Web/button_Next'))
+WebUI.setText(findTestObject('Portal Shell/input_LoginId'), GlobalVariable.ffOffSupplierEmail)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_First Name'), 'Smoke')
+WebUI.setText(findTestObject('Portal Shell/input_Password'), GlobalVariable.ffSupplierPassword)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Last Name'), 'Test')
+WebUI.click(findTestObject('Portal Shell/button_Submit'))
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Email'), 'smoketest@gmail.com')
+WebUI.delay(3)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Job Title'), 'QA')
+// This is the PT-266 bug's exact repro path (supplier + FF off couldn't log in at all, saw repeated
+// 2FA/login loop). That bug is marked resolved, but re-assert it here since it's the most likely
+// regression if flag-off handling breaks again.
+WebUI.verifyTextNotPresent('Invalid login credentials', false)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Phone Number'), '1234567898')
+WebUI.verifyElementNotPresent(findTestObject('Portal Shell/button_SwitchToSCiEnable'), 10)
 
-// Form validates on blur — confirmed live 9/22/2026 (see TC_Registration_InvalidEmailAndPhone).
-// Tab out of Phone before asserting, or the button can still read as disabled.
-WebUI.sendKeys(findTestObject('Page_Portal Web/input_Phone Number'), Keys.chord(Keys.TAB))
+WebUI.closeBrowser()
 
-WebUI.verifyElementClickable(findTestObject('Page_Portal Web/button_Next'))
+// Step 2: SCiEnable direct URL still works, undisturbed by the shell/flag
+WebUI.openBrowser(null)
+
+WebUI.navigateToUrl(GlobalVariable.oldUiBaseUrl)
+
+WebUI.verifyElementPresent(findTestObject('Old Registration/input_CompanyLegalName'), 10)
+
+WebUI.closeBrowser()

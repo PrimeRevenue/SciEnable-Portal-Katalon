@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description>FusionAuth hosted login page email field. Verified live 9/21/2026 against access-dev.primerevenue.com — same FusionAuth template used across environments (dev/reg/qa/staging/uat), so this selector should hold for the Regression env too.</description>
+   <name>input_LoginId</name>
+   <tag></tag>
+   <elementGuidId>d1e2f3a4-b5c6-4d1e-8f2a-3b4c5d6e7f8a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id = 'loginId']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#loginId</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>loginId</value>
+      <webElementGuid>e2f3a4b5-c6d7-4e2f-9a3b-4c5d6e7f8a9b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>loginId</value>
+      <webElementGuid>f3a4b5c6-d7e8-4f3a-8b4c-5d6e7f8a9b0c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>email</value>
+      <webElementGuid>a4b5c6d7-e8f9-4a4b-9c5d-6e7f8a9b0c1d</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@id = 'loginId']</value>
+      <webElementGuid>b5c6d7e8-f9a0-4b5c-8d6e-7f8a9b0c1d2e</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

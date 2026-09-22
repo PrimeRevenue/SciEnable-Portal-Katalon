@@ -1,52 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description>Old UI (scienable-reg.aws.primerevenue.com) test cases — run against the Regression profile.</description>
+   <description></description>
    <name>TS_Old_Registration_Page</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
    <maxConcurrentInstances>1</maxConcurrentInstances>
-   <numberOfRerun>0</numberOfRerun>
+   <numberOfRerun>3</numberOfRerun>
    <orchestration>CLASSIC</orchestration>
    <pageLoadTimeout>10</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>e3f4a5b6-c7d8-4e3f-9a01-627384950162</testSuiteGuid>
+   <rerunImmediately>true</rerunImmediately>
+   <testSuiteGuid>ab6cb287-8378-483b-aa54-da093bdb857e</testSuiteGuid>
    <testCaseLink>
-      <guid>a4b5c6d7-e8f9-4a4b-8c12-738495016273</guid>
+      <guid>25ba7493-b0c5-4d24-906c-cb00d328c54b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Old Registration/TC_Registration_HappyPath_OldUI</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b5c6d7e8-f9a0-4b5c-9d23-849501627384</guid>
+      <guid>09428261-ef77-4dc0-976e-6329c1c2a06c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Old Registration/TC_Registration_RequiredFieldValidation_OldUI</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c6d7e8f9-a0b1-4c6d-8e34-950162738495</guid>
+      <guid>6854e39c-4876-4111-b8d6-ba05864f524e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Old Registration/TC_Registration_InvalidPostalCode_OldUI</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>d7e8f9a0-b1c2-4d7e-9f45-062738495016</guid>
+      <guid>7821fad5-fca3-4228-89e0-ef3313459090</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Old Registration/TC_Registration_CompanyNameForbiddenChars_OldUI</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>f8a9b0c1-d2e3-4f8a-9b56-738495016273</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Old Registration/TC_Registration_InvalidEmailAndPhone_OldUI</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>b6e7f8a9-b0c1-4b6e-8f78-950162738495</guid>
+      <guid>60c4cfb8-bfd0-4737-8b09-d5ac69b59bc9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Old Registration/TC_Registration_AddressFormat_OldUI</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>948c0194-6b8a-46ef-9b60-a4c0924f751a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Old Registration/TC_Registration_InvalidEmailAndPhone_OldUI</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

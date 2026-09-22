@@ -26,7 +26,9 @@ WebUI.setText(findTestObject('Page_Portal Web/input_First Name'), 'Smoke')
 
 WebUI.setText(findTestObject('Page_Portal Web/input_Last Name'), 'Test')
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Email'), 'smoketest@gmail.com')
+// Happy path creates a real new account — a static email collides with whatever account the
+// last successful run already created. Use a unique email per run.
+WebUI.setText(findTestObject('Page_Portal Web/input_Email'), 'smoketest+' + System.currentTimeMillis() + '@gmail.com')
 
 WebUI.setText(findTestObject('Page_Portal Web/input_Job Title'), 'QA')
 

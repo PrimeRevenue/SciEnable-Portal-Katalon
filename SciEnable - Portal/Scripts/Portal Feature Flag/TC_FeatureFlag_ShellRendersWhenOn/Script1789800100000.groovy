@@ -20,24 +20,22 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser(null)
 
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
+WebUI.navigateToUrl(GlobalVariable.reactPortalBaseUrl)
 
-// New UI has no inline "required" error text — it disables Next/Submit
-// instead until all required fields are filled. Confirmed live 9/17/2026.
-WebUI.verifyElementNotClickable(findTestObject('Page_Portal Web/button_Next'))
+WebUI.setText(findTestObject('Portal Shell/input_LoginId'), GlobalVariable.ffOnSupplierEmail)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_First Name'), 'Smoke')
+WebUI.setText(findTestObject('Portal Shell/input_Password'), GlobalVariable.ffSupplierPassword)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Last Name'), 'Test')
+WebUI.click(findTestObject('Portal Shell/button_Submit'))
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Email'), 'smoketest@gmail.com')
+WebUI.delay(3)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Job Title'), 'QA')
+WebUI.verifyTextNotPresent('Invalid login credentials', false)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Phone Number'), '1234567898')
+// SCiSupplier home content renders either wrapped in the shell or served directly — the app-switch
+// chrome is what actually distinguishes "shell rendered" from a same-looking direct/fallback page.
+WebUI.verifyElementPresent(findTestObject('Portal Shell/button_SwitchToSCiEnable'), 10)
 
-// Form validates on blur — confirmed live 9/22/2026 (see TC_Registration_InvalidEmailAndPhone).
-// Tab out of Phone before asserting, or the button can still read as disabled.
-WebUI.sendKeys(findTestObject('Page_Portal Web/input_Phone Number'), Keys.chord(Keys.TAB))
+WebUI.verifyTextPresent('Recent Activity', false)
 
-WebUI.verifyElementClickable(findTestObject('Page_Portal Web/button_Next'))
+WebUI.closeBrowser()

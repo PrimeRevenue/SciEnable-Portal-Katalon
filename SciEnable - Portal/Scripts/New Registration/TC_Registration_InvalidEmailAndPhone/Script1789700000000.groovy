@@ -35,12 +35,25 @@ WebUI.setText(findTestObject('Page_Portal Web/input_Phone Number'), 'abc!!!')
 
 WebUI.verifyElementNotClickable(findTestObject('Page_Portal Web/button_Next'))
 
+WebUI.sendKeys(findTestObject('Page_Portal Web/input_Email'), Keys.chord(Keys.CONTROL, 'a'))
+
+WebUI.sendKeys(findTestObject('Page_Portal Web/input_Email'), Keys.chord(Keys.DELETE))
+
 // Fix email only -> still disabled (phone still invalid)
 WebUI.setText(findTestObject('Page_Portal Web/input_Email'), 'smoketest@gmail.com')
 
 WebUI.verifyElementNotClickable(findTestObject('Page_Portal Web/button_Next'))
 
+WebUI.sendKeys(findTestObject('Page_Portal Web/input_Phone Number'), Keys.chord(Keys.CONTROL, 'a'))
+
+WebUI.sendKeys(findTestObject('Page_Portal Web/input_Phone Number'), Keys.chord(Keys.DELETE))
+
 // Fix phone too -> now enabled
 WebUI.setText(findTestObject('Page_Portal Web/input_Phone Number'), '1234567898')
 
+// Form validates on blur — confirmed live 9/22/2026: the same field values only flip the button
+// enabled once focus leaves the Phone field. setText alone doesn't blur it, so tab out first.
+WebUI.sendKeys(findTestObject('Page_Portal Web/input_Phone Number'), Keys.chord(Keys.TAB))
+
 WebUI.verifyElementClickable(findTestObject('Page_Portal Web/button_Next'))
+

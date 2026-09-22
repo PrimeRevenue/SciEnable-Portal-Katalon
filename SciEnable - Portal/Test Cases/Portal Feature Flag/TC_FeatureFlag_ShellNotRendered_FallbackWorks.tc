@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Mirrors Jira PT-269 (manually tested/passed 6/17/2026 by Lejla): when show-react-portal-poc is OFF, the React shell must not render, and users must still be able to reach SCiEnable and SCiSupplier via their existing direct URLs without disruption. PT-269 itself notes the exact fallback behavior (redirect/404/"coming soon") was still an open PM question as of the source ticket — this script only asserts the shell does NOT render and that direct-URL access still works, not a specific fallback UI. Uses ffOffSupplierEmail (Regression profile), an account confirmed flagged-out as of PT-266 (6/17/2026) — reconfirm current flag state with Lejla/PostHog before trusting a failure as a real regression vs. a stale flag assumption.</description>
+   <name>TC_FeatureFlag_ShellNotRendered_FallbackWorks</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b3c4d5e6-f7a8-4b3c-9d4e-5f6a7b8c9d0e</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Mirrors Jira PT-268 (manually tested/passed 6/17/2026 by Lejla): when show-react-portal-poc is ON for a supplier with active FusionAuth registrations, the React shell renders with the SCiSupplier iframe experience instead of falling back. Uses ffOnSupplierEmail (Regression profile), an account confirmed flagged-in as of 6/17/2026 — reconfirm current flag state with Lejla/PostHog before trusting a failure as a real regression vs. a stale flag assumption. Login selectors verified live 9/21/2026; requires VPN/Tailscale to reach access-reg.primerevenue.com.</description>
+   <name>TC_FeatureFlag_ShellRendersWhenOn</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a2b3c4d5-e6f7-4a2b-8c3d-4e5f6a7b8c9d</testCaseGuid>
+</TestCaseEntity>

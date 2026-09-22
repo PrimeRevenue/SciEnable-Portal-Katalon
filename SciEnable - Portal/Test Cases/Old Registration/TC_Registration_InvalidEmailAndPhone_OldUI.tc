@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Verifies old UI shows inline error text for invalid email ("Please enter a valid email") and invalid phone ("Please enter a valid phone number with digits from 0-9+-.@#$&()"), both triggered dynamically on blur (confirmed live 9/18/2026). Contrast with new UI, which validates the same rules but shows no visible error — see TC_Registration_InvalidEmailAndPhone.</description>
+   <description></description>
    <name>TC_Registration_InvalidEmailAndPhone_OldUI</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>f9a0b1c2-d3e4-4f9a-9b67-283940516273</testCaseGuid>
+   <testCaseGuid>ac08e8b6-af55-4bac-af28-0fa5156edd67</testCaseGuid>
 </TestCaseEntity>

@@ -27,12 +27,16 @@ WebUI.setText(findTestObject('Old Registration/input_Address1'), '123 Main St!')
 
 WebUI.setText(findTestObject('Old Registration/input_CompanyLegalName'), 'Test')
 
+WebUI.click(findTestObject('Old Registration/button_Submit'))
+
 WebUI.verifyTextPresent('Address is invalid', false)
 
 // PO Box
 WebUI.setText(findTestObject('Old Registration/input_Address1'), 'PO Box 123')
 
 WebUI.setText(findTestObject('Old Registration/input_CompanyLegalName'), 'Test')
+
+WebUI.click(findTestObject('Old Registration/button_Submit'))
 
 WebUI.verifyTextPresent('Please submit a physical address. PO Boxes are not supported.', false)
 

@@ -28,6 +28,8 @@ WebUI.setText(findTestObject('Old Registration/input_Phone'), 'abc!!!')
 
 WebUI.setText(findTestObject('Old Registration/input_FirstName'), 'Smoke')
 
+WebUI.click(findTestObject('Old Registration/button_Submit'))
+
 WebUI.verifyTextPresent('Please enter a valid email', false)
 
 WebUI.verifyTextPresent('Please enter a valid phone number with digits from 0-9+-.@#$&()', false)

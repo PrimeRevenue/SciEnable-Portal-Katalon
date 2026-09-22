@@ -20,24 +20,35 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser(null)
 
-WebUI.navigateToUrl(GlobalVariable.baseUrl)
+WebUI.navigateToUrl(GlobalVariable.reactPortalBaseUrl)
 
-// New UI has no inline "required" error text — it disables Next/Submit
-// instead until all required fields are filled. Confirmed live 9/17/2026.
-WebUI.verifyElementNotClickable(findTestObject('Page_Portal Web/button_Next'))
+WebUI.setText(findTestObject('Portal Shell/input_LoginId'), GlobalVariable.ffOnSupplierEmail)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_First Name'), 'Smoke')
+WebUI.setText(findTestObject('Portal Shell/input_Password'), GlobalVariable.ffSupplierPassword)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Last Name'), 'Test')
+WebUI.click(findTestObject('Portal Shell/button_Submit'))
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Email'), 'smoketest@gmail.com')
+WebUI.delay(3)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Job Title'), 'QA')
+// Default landing app — SCiSupplier home content per PT-268 attachment
+WebUI.verifyTextPresent('Recent Activity', false)
 
-WebUI.setText(findTestObject('Page_Portal Web/input_Phone Number'), '1234567898')
+// Switch SS -> SE (~2-3s per PT-272)
+WebUI.click(findTestObject('Portal Shell/button_SwitchToSCiEnable'))
 
-// Form validates on blur — confirmed live 9/22/2026 (see TC_Registration_InvalidEmailAndPhone).
-// Tab out of Phone before asserting, or the button can still read as disabled.
-WebUI.sendKeys(findTestObject('Page_Portal Web/input_Phone Number'), Keys.chord(Keys.TAB))
+WebUI.delay(4)
 
-WebUI.verifyElementClickable(findTestObject('Page_Portal Web/button_Next'))
+// SCiEnable onboarding dashboard content per PT-268 attachment
+WebUI.verifyTextPresent('Onboarding Checklist', false)
+
+// No re-authentication should be required on switch (FR-7 / US-01)
+WebUI.verifyTextNotPresent('Invalid login credentials', false)
+
+// Switch SE -> SS (~2s per PT-272)
+WebUI.click(findTestObject('Portal Shell/button_SwitchToSCiSupplier'))
+
+WebUI.delay(3)
+
+WebUI.verifyTextPresent('Recent Activity', false)
+
+WebUI.closeBrowser()
