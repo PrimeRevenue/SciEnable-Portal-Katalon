@@ -32,4 +32,32 @@
       <protected>true</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>React iframe Portal shell (feature flag show-react-portal-poc), Regression env. Corrected 9/22/2026 — per the "Portal Environments" Confluence page (Portal Team space, actively maintained), the reg deployment URL is regression.primerevenue.com, not access-reg.primerevenue.com (that was a stale URL pulled from a 3-month-old bug ticket; the env was migrated off it per that page's completed DevOps checklist). Requires VPN/Tailscale to reach from outside the office network. NOT YET CONFIRMED LIVE — flagged by Danniecia 9/22 that the old URL didn't load; this replacement is unverified pending a real test.</description>
+      <initValue>'https://regression.primerevenue.com'</initValue>
+      <name>reactPortalBaseUrl</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Supplier account confirmed (PT-272, 6/17/2026) to exist in both SE and SS with a working SE&lt;-&gt;SS app-switch inside the shell — i.e. flag was ON for this account as of that date. Flag state may have drifted since; reconfirm with Lejla/PostHog before trusting a run.</description>
+      <initValue>'supplier.scienable+iry123@gmail.com'</initValue>
+      <name>ffOnSupplierEmail</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Password for ffOnSupplierEmail / ffOffSupplierEmail (same password per PT-266/PT-272 bug repro steps).</description>
+      <initValue>'Prime109!'</initValue>
+      <name>ffSupplierPassword</name>
+      <protected>true</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Supplier account used in PT-266 ("SE: FF off - Supplier is unable to login", resolved 6/17/2026) — had the flag OFF as of that bug report. Flag state may have drifted since; reconfirm with Lejla/PostHog before trusting a run.</description>
+      <initValue>'supplier.scienable+irr@gmail.com'</initValue>
+      <name>ffOffSupplierEmail</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
