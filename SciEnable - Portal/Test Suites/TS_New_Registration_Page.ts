@@ -31,4 +31,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/New Registration/TC_Registration_InvalidEmailAndPhone</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>a5d6e7f8-a9b0-4a5d-9e67-849501627384</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/New Registration/TC_Registration_AddressFormat</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Confirmed live 9/18/2026: the new UI enforces the PO Box rule ("P.O. Box addresses are not allowed") the same as the old UI. BUT it has no max-length enforcement (maxLength attribute is -1, unset) and no disallowed-character validation at all (aria-invalid stays "false" for "123 Main St!") — both of which the old UI enforces. Only the PO Box check is automated here since it's the only rule that actually exists to test. See TC_Registration_AddressFormat_OldUI for the full old UI comparison.</description>
+   <name>TC_Registration_AddressFormat</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b1c2d3e4-f5a6-4b1c-9d78-405162738495</testCaseGuid>
+</TestCaseEntity>

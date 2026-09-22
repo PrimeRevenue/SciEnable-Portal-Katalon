@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verifies old UI's Address 1 rules (confirmed live 9/18/2026): disallowed character ("!") triggers "Address is invalid"; PO Box triggers "Please submit a physical address. PO Boxes are not supported."; field has maxlength=50 HTML attribute (caps input directly, no triggered error). Contrast with new UI, which enforces the PO Box rule but nothing else on this field — see TC_Registration_AddressFormat.</description>
+   <name>TC_Registration_AddressFormat_OldUI</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a0b1c2d3-e4f5-4a0b-8c67-394015627384</testCaseGuid>
+</TestCaseEntity>
