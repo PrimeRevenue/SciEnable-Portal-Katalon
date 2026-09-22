@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Confirmed live 9/18/2026: unlike Company Name/Postal Code, the new UI DOES validate email and phone format — the Next button stays disabled until both are valid. But it gives NO visible error message explaining why, unlike the old UI's inline text. Worth flagging as a UX gap (silent failure) separate from the "missing validation entirely" gaps found elsewhere. See TC_Registration_InvalidEmailAndPhone_OldUI for the old UI's visible-error equivalent.</description>
+   <description>Confirmed live 9/18/2026: unlike Company Name/Postal Code, the new UI DOES validate email and phone format — the Next button stays disabled until both are valid. But it gives NO visible error message explaining why, unlike the old UI's inline text. Worth flagging as a UX gap (silent failure) separate from the &quot;missing validation entirely&quot; gaps found elsewhere. See TC_Registration_InvalidEmailAndPhone_OldUI for the old UI's visible-error equivalent.</description>
    <name>TC_Registration_InvalidEmailAndPhone</name>
    <tag></tag>
    <comment></comment>

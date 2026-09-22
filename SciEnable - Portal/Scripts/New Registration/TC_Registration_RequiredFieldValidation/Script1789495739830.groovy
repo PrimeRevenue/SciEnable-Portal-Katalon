@@ -36,4 +36,8 @@ WebUI.setText(findTestObject('Page_Portal Web/input_Job Title'), 'QA')
 
 WebUI.setText(findTestObject('Page_Portal Web/input_Phone Number'), '1234567898')
 
+// Form validates on blur — confirmed live 9/22/2026 (see TC_Registration_InvalidEmailAndPhone).
+// Tab out of Phone before asserting, or the button can still read as disabled.
+WebUI.sendKeys(findTestObject('Page_Portal Web/input_Phone Number'), Keys.chord(Keys.TAB))
+
 WebUI.verifyElementClickable(findTestObject('Page_Portal Web/button_Next'))

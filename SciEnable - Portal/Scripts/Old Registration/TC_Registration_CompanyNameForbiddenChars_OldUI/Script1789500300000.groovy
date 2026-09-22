@@ -26,4 +26,7 @@ WebUI.setText(findTestObject('Old Registration/input_CompanyLegalName'), 'Test:C
 
 WebUI.setText(findTestObject('Old Registration/input_Address1'), '123 Test Drive')
 
+WebUI.click(findTestObject('Old Registration/button_Submit'))
+
 WebUI.verifyTextPresent('Company name should not include any of these characters: ~ : ; |', false)
+

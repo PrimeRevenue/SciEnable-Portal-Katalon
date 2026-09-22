@@ -52,7 +52,10 @@ WebUI.setText(findTestObject('Old Registration/input_LastName'), 'Test')
 
 WebUI.setText(findTestObject('Old Registration/input_JobTitle'), 'QA')
 
-WebUI.setText(findTestObject('Old Registration/input_Email'), 'smoketest@gmail.com')
+// Happy path creates a real new account — a static email collides with whatever account the
+// last successful run already created. Use a unique email per run (Gmail + aliasing, same
+// pattern as the supplier.scienable+xxx test accounts used elsewhere in this project).
+WebUI.setText(findTestObject('Old Registration/input_Email'), 'smoketest+' + System.currentTimeMillis() + '@gmail.com')
 
 WebUI.setText(findTestObject('Old Registration/input_Phone'), '1234567898')
 
