@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>App-switch control in the React shell header that navigates to the SCiSupplier (trading) iframe. NOT verified live — built from the PT-268 attachment screenshot only. Re-capture with Katalon Studio's Spy against a real login before first run — text-based XPath is a reasonable starting guess, not a confirmed selector.</description>
+   <description>App-switch control in the React shell header that navigates to the SCiSupplier (trading) iframe. Verified live 9/23/2026 via Katalon Studio's Object Spy against a real logged-in session (supplier.scienable+iry123@gmail.com, regression.primerevenue.com) — it's an &lt;a&gt; tag, not a button as originally guessed.</description>
    <name>button_SwitchToSCiSupplier</name>
    <tag></tag>
    <elementGuidId>d9e0f1a2-b3c4-4d9e-8f0a-1b2c3d4e5f6a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[self::button or self::a or self::span][normalize-space(text()) = 'SCiSupplier']</value>
+         <value>//a[contains(text(),'SCiSupplier')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -16,17 +16,33 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>e0f1a2b3-c4d5-4e0f-9a1b-2c3d4e5f6a7b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
       <value>SCiSupplier</value>
-      <webElementGuid>e0f1a2b3-c4d5-4e0f-9a1b-2c3d4e5f6a7b</webElementGuid>
+      <webElementGuid>f1a2b3c4-d5e6-4f1a-8b2c-3d4e5f6a7b8c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:contains_text</name>
+      <name>xpath:link</name>
       <type>Main</type>
-      <value>//*[self::button or self::a or self::span][normalize-space(text()) = 'SCiSupplier']</value>
-      <webElementGuid>f1a2b3c4-d5e6-4f1a-8b2c-3d4e5f6a7b8c</webElementGuid>
+      <value>//a[contains(text(),'SCiSupplier')]</value>
+      <webElementGuid>a2b3c4d5-e6f7-4a2b-8c3d-4e5f6a7b8c9d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/nav/ul/li[2]/a</value>
+      <webElementGuid>b3c4d5e6-f7a8-4b3c-9d4e-5f6a7b8c9d0e</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -43,3 +43,14 @@ WebUI.setText(findTestObject('Page_Portal Web/input_Enter your street address'),
 WebUI.setText(findTestObject('Page_Portal Web/input_Enter your company name'), 'Test')
 
 WebUI.verifyTextPresent('P.O. Box addresses are not allowed', false)
+
+// RETESTED 9/24/2026: the 9/18 "no disallowed-character validation" finding was stale — likely
+// never blurred the field before checking. With a real blur (Keys.chord(Keys.TAB)) after typing,
+// aria-invalid correctly flips to "true" for "123 Main St!". New UI does validate this field.
+WebUI.setText(findTestObject('Page_Portal Web/input_Enter your street address'), '123 Main St!')
+
+WebUI.sendKeys(findTestObject('Page_Portal Web/input_Enter your street address'), Keys.chord(Keys.TAB))
+
+WebUI.verifyElementAttributeValue(findTestObject('Page_Portal Web/input_Enter your street address'), 'aria-invalid', 'true', 10)
+
+WebUI.closeBrowser()

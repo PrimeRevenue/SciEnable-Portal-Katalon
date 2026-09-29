@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Mirrors Jira US-02 / PT-197 (App-Switch Navigation Control, Done) using the account from PT-272's repro steps (supplier.scienable+iry123@gmail.com), confirmed 6/17/2026 to exist in both SE and SS with working switch behavior. PT-272 (open, Blocked on tracing infra, not a functional blocker) documents switching as slow — ~2-3s SS-&gt;SE, ~2s SE-&gt;SS — hence the generous delays below rather than tight waits. Requires VPN/Tailscale; login selectors verified live 9/21/2026, app-switch tab selectors are NOT verified live (built from a screenshot) — re-capture with Spy in Katalon Studio before first run.</description>
+   <description>Mirrors Jira US-02 / PT-197 (App-Switch Navigation Control, Done) using the account from PT-272's repro steps (supplier.scienable+iry123@gmail.com), confirmed 6/17/2026 to exist in both SE and SS with working switch behavior. PT-272 (open, Blocked on tracing infra, not a functional blocker) documents switching as slow — ~2-3s SS->SE, ~2s SE->SS — hence the generous delays below rather than tight waits. Requires VPN/Tailscale; login selectors verified live 9/21/2026, app-switch tab selectors are NOT verified live (built from a screenshot) — re-capture with Spy in Katalon Studio before first run.</description>
    <name>TC_AppSwitch_NavigateBetweenSEandSS</name>
    <tag></tag>
    <comment></comment>

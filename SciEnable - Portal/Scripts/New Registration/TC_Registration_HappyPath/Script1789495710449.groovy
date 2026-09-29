@@ -56,6 +56,8 @@ WebUI.click(findTestObject('Page_Portal Web/li_registration-countryId-option-0')
 
 WebUI.waitForElementNotPresent(findTestObject('Page_Portal Web/ul_countryId_listbox'), 5)
 
+WebUI.delay(1)
+
 WebUI.click(findTestObject('Page_Portal Web/svg_MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cs'))
 
 WebUI.mouseOver(findTestObject('Page_Portal Web/li_registration-stateId-option-0'))
@@ -68,6 +70,10 @@ WebUI.setText(findTestObject('Page_Portal Web/input_Enter city'), 'Atlanta')
 
 WebUI.click(findTestObject('Page_Portal Web/div_Tax ID_Company Name_Address_ZIP_Postal Co'))
 
+// Buffer for the previous listbox to fully close before opening the next one — same class
+// of MUI Autocomplete timing flakiness fixed before, recurring intermittently.
+WebUI.delay(1)
+
 WebUI.click(findTestObject('Page_Portal Web/svg_MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cs_1'))
 
 WebUI.mouseOver(findTestObject('Page_Portal Web/li_registration-organizationCountryId-option-0'))
@@ -76,6 +82,8 @@ WebUI.click(findTestObject('Page_Portal Web/li_registration-organizationCountryI
 
 WebUI.waitForElementNotPresent(findTestObject('Page_Portal Web/ul_organizationCountryId_listbox'), 5)
 
+WebUI.delay(1)
+
 WebUI.click(findTestObject('Page_Portal Web/svg_MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cs_2'))
 
 WebUI.mouseOver(findTestObject('Page_Portal Web/li_registration-organizationStateId-option-0'))
@@ -83,6 +91,8 @@ WebUI.mouseOver(findTestObject('Page_Portal Web/li_registration-organizationStat
 WebUI.click(findTestObject('Page_Portal Web/li_registration-organizationStateId-option-0'))
 
 WebUI.waitForElementNotPresent(findTestObject('Page_Portal Web/ul_organizationStateId_listbox'), 5)
+
+WebUI.delay(1)
 
 WebUI.click(findTestObject('Page_Portal Web/svg_MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cs_3'))
 
@@ -95,6 +105,10 @@ WebUI.waitForElementNotPresent(findTestObject('Page_Portal Web/ul_organizationTy
 WebUI.click(findTestObject('Page_Portal Web/div_Tax ID_Company Name_Address_ZIP_Postal Co'))
 
 WebUI.waitForElementNotPresent(findTestObject('Page_Portal Web/ul_organizationTypeId_listbox'), 5)
+
+// This is the exact transition that failed 9/24 — the org-type listbox was still intercepting
+// clicks despite waitForElementNotPresent passing (present-in-DOM vs. fully-closed are not the same).
+WebUI.delay(1)
 
 WebUI.click(findTestObject('Page_Portal Web/svg_MuiSvgIcon-root MuiSvgIcon-fontSizeMedium cs_4'))
 

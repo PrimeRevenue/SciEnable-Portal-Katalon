@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>KNOWN GAP (confirmed live 9/24/2026 by Danniecia): New UI allows submitting two registrations with identical data — both succeed with no duplicate-detection error. Old UI would not allow this. Flagged in Confluence Section 3 as the highest-priority finding in this batch — likely a real data-integrity bug, not just a UX gap. This test locks in the current (buggy) behavior — both submissions are asserted to succeed — so a future fix that adds duplicate detection will flip this test, which is the point: it should fail once the bug is fixed, prompting an update. CAUTION: this test creates two real duplicate accounts in the target environment every time it runs — do not run it repeatedly/on a schedule without a cleanup plan.</description>
+   <name>TC_Registration_DuplicateAccountAllowed</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4402f2bb-3a00-46d4-8342-c4c0fb2a698b</testCaseGuid>
+</TestCaseEntity>

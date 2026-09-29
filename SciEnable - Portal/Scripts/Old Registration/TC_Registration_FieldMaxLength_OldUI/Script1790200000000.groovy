@@ -20,38 +20,18 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser(null)
 
-WebUI.navigateToUrl(GlobalVariable.reactPortalBaseUrl)
+WebUI.navigateToUrl(GlobalVariable.oldUiBaseUrl)
 
-WebUI.setText(findTestObject('Portal Shell/input_LoginId'), GlobalVariable.ffOnSupplierEmail)
+// Max length is enforced via HTML maxlength attribute, not a triggered error —
+// same pattern already used for Address 1 (50) and Postal Code (15).
+WebUI.verifyElementAttributeValue(findTestObject('Old Registration/input_CompanyLegalName'), 'maxlength', '100', 10)
 
-// ffSupplierPassword switched from protected/encrypted to plain 9/29/2026 — setEncryptedText()
-// couldn't decode the stored value, and plain setText was typing literal ciphertext before that.
-// Plain setText avoids the encrypt/decrypt round-trip for this shared internal test account.
-WebUI.setText(findTestObject('Portal Shell/input_Password'), GlobalVariable.ffSupplierPassword)
+WebUI.verifyElementAttributeValue(findTestObject('Old Registration/input_City'), 'maxlength', '50', 10)
 
-WebUI.click(findTestObject('Portal Shell/button_Submit'))
+WebUI.verifyElementAttributeValue(findTestObject('Old Registration/input_FirstName'), 'maxlength', '50', 10)
 
-WebUI.delay(3)
+WebUI.verifyElementAttributeValue(findTestObject('Old Registration/input_LastName'), 'maxlength', '50', 10)
 
-// Default landing app — SCiSupplier home content per PT-268 attachment
-WebUI.verifyTextPresent('Recent Activity', false)
-
-// Switch SS -> SE (~2-3s per PT-272)
-WebUI.click(findTestObject('Portal Shell/button_SwitchToSCiEnable'))
-
-WebUI.delay(4)
-
-// SCiEnable onboarding dashboard content per PT-268 attachment
-WebUI.verifyTextPresent('Onboarding Checklist', false)
-
-// No re-authentication should be required on switch (FR-7 / US-01)
-WebUI.verifyTextNotPresent('Invalid login credentials', false)
-
-// Switch SE -> SS (~2s per PT-272)
-WebUI.click(findTestObject('Portal Shell/button_SwitchToSCiSupplier'))
-
-WebUI.delay(3)
-
-WebUI.verifyTextPresent('Recent Activity', false)
+WebUI.verifyElementAttributeValue(findTestObject('Old Registration/input_Email'), 'maxlength', '50', 10)
 
 WebUI.closeBrowser()

@@ -55,4 +55,11 @@
       <testCaseId>Test Cases/Old Registration/TC_Registration_InvalidEmailAndPhone_OldUI</testCaseId>
       <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
+   <testCaseLink>
+      <guid>5954c759-df08-40b5-9139-f723e316290b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Old Registration/TC_Registration_FieldMaxLength_OldUI</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>false</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
 </TestSuiteEntity>

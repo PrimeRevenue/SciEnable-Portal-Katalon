@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Coverage gap identified 9/23/2026: Company Legal Name (100), City (50), First Name (50), Last Name (50), and Email (50) each state a "Maximum N characters" rule per the registration form's validation hints, but no existing Old UI test case checked any of them. Address 1 and Postal Code already have this covered in TC_Registration_AddressFormat_OldUI / TC_Registration_InvalidPostalCode_OldUI via the same pattern: max length is enforced via the HTML maxlength attribute rather than a triggered error message, so verify the attribute directly instead of trying to type past it.</description>
+   <name>TC_Registration_FieldMaxLength_OldUI</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>793e19ff-fc45-4776-b9d3-e51f37f58ccf</testCaseGuid>
+</TestCaseEntity>
