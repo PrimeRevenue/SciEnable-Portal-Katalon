@@ -25,6 +25,9 @@ WebUI.navigateToUrl(GlobalVariable.reactPortalBaseUrl)
 
 WebUI.setText(findTestObject('Portal Shell/input_LoginId'), GlobalVariable.ffOffSupplierEmail)
 
+// ffSupplierPassword switched from protected/encrypted to plain 9/29/2026 — setEncryptedText()
+// couldn't decode the stored value, and plain setText was typing literal ciphertext before that.
+// Plain setText avoids the encrypt/decrypt round-trip for this shared internal test account.
 WebUI.setText(findTestObject('Portal Shell/input_Password'), GlobalVariable.ffSupplierPassword)
 
 WebUI.click(findTestObject('Portal Shell/button_Submit'))

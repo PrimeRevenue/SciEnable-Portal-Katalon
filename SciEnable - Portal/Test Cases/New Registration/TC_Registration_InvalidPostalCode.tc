@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>KNOWN GAP (confirmed live 9/17/2026): the new UI's postal code field (#registration-postalCode) has no max-length enforcement — entered a 42-character value, it was accepted with no error and no truncation (maxLength attribute is -1, unset). The old UI enforces a 15-character max ("Maximum 15 characters"). Not yet automated here since there's no actual validation to assert against — this needs to be reported/fixed on the product side before a meaningful regression test can be written. See TC_Registration_InvalidPostalCode_OldUI for the equivalent old UI test, which IS enforced.</description>
+   <description>RETESTED 9/24/2026: the 9/17 finding below was stale. New UI's postal code field (#registration-postalCode) now rejects an oversized value with an inline error ("Please enter a valid postal code") on blur — confirmed live. Automated below. Original 9/17 note, kept for history: "entered a 42-character value, it was accepted with no error and no truncation (maxLength attribute is -1, unset)." Old UI enforces a 15-character max via HTML maxlength; new UI's mechanism is a format-validation message instead, not a hard character cap — see TC_Registration_InvalidPostalCode_OldUI for the old UI equivalent.</description>
    <name>TC_Registration_InvalidPostalCode</name>
    <tag></tag>
    <comment></comment>
