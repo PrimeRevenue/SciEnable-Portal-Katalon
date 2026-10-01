@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>iframe_SCiSupplier_MuiBox-root css-akvbpd</name>
+   <tag></tag>
+   <elementGuidId>1d8d1ec7-4c83-4254-8dcf-3ed89afdaa2f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='root']/div/div/div/iframe</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>iframe.MuiBox-root.css-akvbpd</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>iframe[title=&quot;SciEnable&quot;]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>iframe</value>
+      <webElementGuid>d57fb1bc-9b70-4f66-9a6c-5e1885aa22a7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>MuiBox-root css-akvbpd</value>
+      <webElementGuid>0c70e38c-bfe7-406e-b1b1-0bd1193e24b8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>/embedded/scienable/</value>
+      <webElementGuid>c6f6ddd9-083a-4216-a78d-8cb8480a64cb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>title</name>
+      <type>Main</type>
+      <value>SciEnable</value>
+      <webElementGuid>ae76d49c-82d9-487b-a225-e0f6aede757e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>sandbox</name>
+      <type>Main</type>
+      <value>allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-downloads allow-modals</value>
+      <webElementGuid>e08ae816-723c-4d8f-ad74-bb3a7b9c4666</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;root&quot;)/div[@class=&quot;MuiBox-root css-12x4niu&quot;]/div[@class=&quot;MuiBox-root css-1vscv69&quot;]/div[@class=&quot;MuiBox-root css-ojqyia&quot;]/iframe[@class=&quot;MuiBox-root css-akvbpd&quot;]</value>
+      <webElementGuid>fd8e0eb5-0728-4c42-bd22-412020082ffe</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='root']/div/div/div/iframe</value>
+      <webElementGuid>b6551c82-24f8-4451-8dfd-28003d7bb62f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//iframe</value>
+      <webElementGuid>b7bfa776-ab9f-438b-b666-0fe1557847ff</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//iframe[@src = '/embedded/scienable/' and @title = 'SciEnable']</value>
+      <webElementGuid>85348246-4ffb-4b91-b5af-a9b07485f974</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//iframe[@src = '/embedded/scisupplier/' and @title = 'SciSupplier']</value>
+      <webElementGuid>3cbe6227-4a6c-450d-806e-903a0e588129</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

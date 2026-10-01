@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_rest api</name>
+   <tag></tag>
+   <elementGuidId>c5a310d7-2196-4b92-9ab1-5ba15e1e872c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(//li[@id='wrapper_menusingle']/ul/li/a)[3]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=link[name=&quot;rest api&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>9ba612ff-9ba8-4405-9b80-500fda553802</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>#</value>
+      <webElementGuid>250ee9f9-37a7-4858-85c1-5f7bc7536060</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>drop</value>
+      <webElementGuid>a228c586-0adb-44f2-9358-fb1784e4aec9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>rest api</value>
+      <webElementGuid>9bb25abc-bdfa-428c-a542-2c43564b0692</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;header&quot;)/tbody[1]/tr[@class=&quot;navbar&quot;]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/li[@id=&quot;wrapper_menusingle&quot;]/ul[@class=&quot;menu menu_prnormal&quot;]/li[@class=&quot;right header-menu-item&quot;]/a[@class=&quot;drop&quot;]</value>
+      <webElementGuid>ca1d1606-c905-442c-bacc-7d78fa8dff2f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/Page_Portal Web/iframe_SCiSupplier_MuiBox-root css-akvbpd</value>
+      <webElementGuid>d8047b13-d6e6-46bf-a5ac-31a961b08f7c</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>(//li[@id='wrapper_menusingle']/ul/li/a)[3]</value>
+      <webElementGuid>b516a4df-e791-4ad0-b3f5-78cf87af67a7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'rest api')]</value>
+      <webElementGuid>5fdc418b-8536-412d-ac27-33f7c7e96bf7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Help'])[1]/following::a[1]</value>
+      <webElementGuid>11e1ae53-e8c7-4d9d-87dc-5f0ba5f7d975</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='v 10.0.4.0'])[1]/following::a[2]</value>
+      <webElementGuid>8977a50c-c4f4-4211-9674-63b50050cba0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Switch Company'])[1]/preceding::a[1]</value>
+      <webElementGuid>8b43e1c7-a61f-4f37-8380-edf7ff3f8479</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Timeout 55 sec'])[1]/preceding::a[2]</value>
+      <webElementGuid>113d7781-5946-4185-8186-c7b2ddcbc5b2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='rest api']/parent::*</value>
+      <webElementGuid>9f85e197-055b-44e8-9cab-fb3e4cb99152</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>(//a[contains(@href, '#')])[4]</value>
+      <webElementGuid>e1def87f-4f3d-4a6a-b867-91029d74372c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[5]/ul/li/a</value>
+      <webElementGuid>87a2edc3-5528-4e2c-9765-d300320c9a96</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '#' and (text() = 'rest api' or . = 'rest api')]</value>
+      <webElementGuid>058106e8-47ee-4204-bdc5-4e58acfd7fe9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

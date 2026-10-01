@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description>Companies for ffOffSupplierEmail (supplier.scienable). Full 32-company list as of 10/1/2026 — edit FlagOffSupplierCompanies_source.csv if companies are added/removed.</description>
+   <name>FlagOffSupplierCompanies</name>
+   <tag></tag>
+   <connectionProperties/>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator>COMMA</csvSeperator>
+   <dataFileGUID>c3cd6b0b-1e2b-439d-8626-700b547fffb0</dataFileGUID>
+   <dataSourceUrl>C:\Users\dgray\Desktop\Projects - Katalon\SciEnable-Portal\SciEnable - Portal\Data Files\FlagOffSupplierCompanies_source.csv</dataSourceUrl>
+   <driver>CSV</driver>
+   <isInternalPath>false</isInternalPath>
+   <query></query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName></sheetName>
+   <usingGlobalDBSetting>false</usingGlobalDBSetting>
+</DataFileEntity>
