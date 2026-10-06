@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke flow step 1 — mirrors Jira SE-15096 (supplier registration, old UI, Regression). Based on TC_Registration_HappyPath_OldUI, but registers a unique company name and supplier.scienable+alias email per run and saves both to GlobalVariable.smokeCompanyName / smokeSupplierEmail, so the later smoke steps (GPM validation SE-15100, supplier first login SE-15102) act on this same supplier. Run via the Smoke test suite for those values to carry over.</description>
+   <name>TC_Smoke_01_SupplierRegistration</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>40829603-7671-41fe-a012-3ae2de6a8c39</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke flow step 3 — mirrors Jira SE-15102: the supplier validated in step 2 opens the welcome email (letter opener on Regression), follows the set-password link, sets a password (GlobalVariable.smokeSupplierPassword), accepts the privacy acknowledgement, and lands on the supplier home page with the onboarding steps.</description>
+   <name>TC_Smoke_03_SupplierFirstLogin</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a080ef63-369f-4b6a-a343-8c0708db3f9d</testCaseGuid>
+</TestCaseEntity>
