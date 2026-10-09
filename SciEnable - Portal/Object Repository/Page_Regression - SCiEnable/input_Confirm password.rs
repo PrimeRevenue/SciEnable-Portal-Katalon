@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Email</name>
+   <name>input_Confirm password</name>
    <tag></tag>
-   <elementGuidId>5565f309-35a5-40e1-91c1-9dcbc31eeba1</elementGuidId>
+   <elementGuidId>23b7782f-78a4-4be6-8ce5-ca8d5935a7c1</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id = 'loginId' and @type = 'email' and @name = 'loginId' and @placeholder = 'Email']</value>
+         <value>//*[@id = 'passwordConfirm' and @type = 'password' and @name = 'passwordConfirm' and @placeholder = 'Confirm password']</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id = 'loginId']</value>
+         <value>//*[@id = 'passwordConfirm']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#loginId</value>
+         <value>#passwordConfirm</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value>internal:attr=[placeholder=&quot;Email&quot;i]</value>
+         <value>internal:attr=[placeholder=&quot;Confirm password&quot;i]</value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
@@ -33,31 +33,31 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>606499ce-f23b-4b05-9018-05fdbc0cd524</webElementGuid>
+      <webElementGuid>5225b6e1-6d29-4ca7-a3f2-4b2d0991895f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>loginId</value>
-      <webElementGuid>be95cfa4-3528-4af3-bb1b-0876a403d477</webElementGuid>
+      <value>passwordConfirm</value>
+      <webElementGuid>8a435356-73ad-412c-a207-06d54f68a666</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>email</value>
-      <webElementGuid>0c42f8c4-3171-4b2a-87ec-a6466ee5869b</webElementGuid>
+      <value>password</value>
+      <webElementGuid>76056414-285a-4954-bf0b-f74e195f8b03</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>loginId</value>
-      <webElementGuid>8c85addd-d878-4240-b213-7b4a9cc7e5e5</webElementGuid>
+      <value>passwordConfirm</value>
+      <webElementGuid>662731ad-285a-45b2-86f8-e071de659509</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -65,15 +65,15 @@
       <name>autocapitalize</name>
       <type>Main</type>
       <value>none</value>
-      <webElementGuid>924bf546-ebf0-4d95-9ffb-0e6d85cc5bdd</webElementGuid>
+      <webElementGuid>1bc1db61-435e-4ac8-aad8-3971150fc1f0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>autocomplete</name>
       <type>Main</type>
-      <value>username</value>
-      <webElementGuid>033ce8d5-9b90-4bc0-8890-23605d077041</webElementGuid>
+      <value>new-password</value>
+      <webElementGuid>4d2e3d66-e22a-4b19-b6b5-fd8fe0d13093</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -81,7 +81,7 @@
       <name>autocorrect</name>
       <type>Main</type>
       <value>off</value>
-      <webElementGuid>24040df1-55fc-4760-bca3-a829a691bdd7</webElementGuid>
+      <webElementGuid>729b478d-bf5f-4c39-907d-28c10859525f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -89,54 +89,46 @@
       <name>spellcheck</name>
       <type>Main</type>
       <value>false</value>
-      <webElementGuid>c2ec9150-b6b4-4dc1-9802-957225b32f57</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>autofocus</name>
-      <type>Main</type>
-      <value>autofocus</value>
-      <webElementGuid>3c198e05-1d31-4d4f-97ab-a35f079a1129</webElementGuid>
+      <webElementGuid>faea1d14-20d7-414a-b6ce-6f0816b6901e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>placeholder</name>
       <type>Main</type>
-      <value>Email</value>
-      <webElementGuid>f7f66b41-b5ef-4676-a45e-889c725e8a05</webElementGuid>
+      <value>Confirm password</value>
+      <webElementGuid>9ee1d006-1f88-4762-8eeb-b56cf6782d4d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>parent</name>
       <type>Main</type>
-      <value>md5.v1-b1f7d6ac4c70d9d4d70b73bfb3e08be1</value>
-      <webElementGuid>54516879-2a9b-4ea8-86aa-f19b6621c460</webElementGuid>
+      <value>md5.v1-62727f049001fb811ea8615f5bf1d7a1</value>
+      <webElementGuid>6345a804-91a7-4908-a765-42c6202e8a6b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//*[@id = 'loginId']</value>
-      <webElementGuid>185335a9-131d-4edf-8295-dec49d2c23e9</webElementGuid>
+      <value>//*[@id = 'passwordConfirm']</value>
+      <webElementGuid>e55ba3ab-7782-4758-8479-9ae5347f9285</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//*[@id = 'loginId']</value>
-      <webElementGuid>3e44c12e-f76e-4b4a-ad07-5ed1f0979e8c</webElementGuid>
+      <value>//*[@id = 'passwordConfirm']</value>
+      <webElementGuid>fd747cdc-d503-46d2-bdc4-fe3b3e4f0e5e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@id = 'loginId' and @type = 'email' and @name = 'loginId' and @placeholder = 'Email']</value>
-      <webElementGuid>cd8e159e-dd5a-4de0-92c4-95721e5dbf54</webElementGuid>
+      <value>//input[@id = 'passwordConfirm' and @type = 'password' and @name = 'passwordConfirm' and @placeholder = 'Confirm password']</value>
+      <webElementGuid>bf931c91-9668-4658-9632-92743f2fe876</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Smoke flow step 3 — mirrors Jira SE-15102: the supplier validated in step 2 opens the welcome email (letter opener on Regression), follows the set-password link, sets a password (GlobalVariable.smokeSupplierPassword), accepts the privacy acknowledgement, and lands on the supplier home page with the onboarding steps.</description>
+   <description>Smoke flow step 3 — mirrors Jira SE-15102: the supplier validated in step 2 follows the set-password link from their welcome email, sets a password (GlobalVariable.smokeSupplierPassword), accepts the privacy acknowledgement, and lands on the supplier home page with the onboarding checklist. Welcome emails arrive in the supplier.scienable Gmail (often in Spam, and with a delay), and the link is single-use and expires, so for now paste a fresh link into the setPasswordLink variable before running. Reading the email automatically (Gmail IMAP vs API) is pending a decision from Sapna.</description>
    <name>TC_Smoke_03_SupplierFirstLogin</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>a080ef63-369f-4b6a-a343-8c0708db3f9d</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ccdbb9fa-3115-4444-9165-32ed3128c94c</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description>Password Set Up / Reset Password link from the supplier's email. Single-use and short-lived — paste a fresh one before each run.</description>
+      <id>ccdbb9fa-3115-4444-9165-32ed3128c94c</id>
+      <masked>false</masked>
+      <name>setPasswordLink</name>
+   </variable>
 </TestCaseEntity>

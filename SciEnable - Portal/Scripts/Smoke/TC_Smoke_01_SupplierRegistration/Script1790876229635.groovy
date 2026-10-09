@@ -17,6 +17,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+// The smoke flow only works on Regression; other profiles (e.g. QA1) still reach the old
+// registration page, so without this check the mistake only surfaces in step 2.
+if (!GlobalVariable.smokeGpmEmail) {
+    KeywordUtil.markFailedAndStop('Smoke variables are empty — select the Regression profile and run again')
+}
+
 // Unique per run: the GPM picks the supplier by company name in SE-15100, and a reused name
 // ("Supplier Smoke") would match every earlier run's registration too.
 String runId = new Date().format('MMddHHmmss')

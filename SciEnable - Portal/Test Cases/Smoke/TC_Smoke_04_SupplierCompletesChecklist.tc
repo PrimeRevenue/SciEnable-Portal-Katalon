@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke flow step 4 — mirrors Jira SE-15103: the supplier logs in (smokeSupplierEmail, or the supplierEmail variable when run on its own) and completes four onboarding checklist items — Company Details (State/Province of Incorporation + tax ID), Platform Administrator (Yes + Save), Financial Decision Maker (Yes + Save) and My Preferences / Payment Preferences (acknowledge + Save). Each item opens in its own iframe; the script switches frames explicitly. Can only run once per supplier (items stay completed), so it needs a supplier that has just finished step 3.</description>
+   <name>TC_Smoke_04_SupplierCompletesChecklist</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>cd94a373-cfa4-4bed-9d32-0a7a2bcfe872</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a3e2e542-f5de-4462-a467-7f4da16defe2</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description>Only for running this step on its own: the supplier's login email (supplier.scienable+smoke...@gmail.com). Leave blank in the suite — step 1's smokeSupplierEmail is used instead.</description>
+      <id>a3e2e542-f5de-4462-a467-7f4da16defe2</id>
+      <masked>false</masked>
+      <name>supplierEmail</name>
+   </variable>
+</TestCaseEntity>
