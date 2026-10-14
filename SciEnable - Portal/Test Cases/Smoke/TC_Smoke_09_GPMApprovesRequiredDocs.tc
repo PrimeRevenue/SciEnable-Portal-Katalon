@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke flow step 9 — mirrors Jira SE-6150: the GPM opens outlook program, selects the smoke supplier, opens Required Documents from the supplier's onboarding checklist and approves each uploaded document; status becomes &quot;Ready to be sent to Funder&quot;. Needs a supplier that has finished step 8.</description>
+   <name>TC_Smoke_09_GPMApprovesRequiredDocs</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>33845950-0266-4dbb-8cb0-ef2f15c18ce8</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>940b1e98-e745-46f3-983d-55409bade11e</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description>Only for running this step on its own: the supplier's company name (Smoke Supplier MMddHHmmss). Leave blank in the suite — step 1's smokeCompanyName is used instead.</description>
+      <id>940b1e98-e745-46f3-983d-55409bade11e</id>
+      <masked>false</masked>
+      <name>companyName</name>
+   </variable>
+</TestCaseEntity>
