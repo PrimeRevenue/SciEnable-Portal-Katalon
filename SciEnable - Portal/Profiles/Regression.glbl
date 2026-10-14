@@ -95,4 +95,18 @@
       <protected>true</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Gmail inbox the smoke suppliers' emails go to (all supplier.scienable+smoke... aliases deliver here). Read over IMAP by Keywords/smoke/GmailReader. Names follow Katalon's OTP guide.</description>
+      <initValue>'supplier.scienable@gmail.com'</initValue>
+      <name>GMAILUSERNAME</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Google App Password (16 characters) for GMAILUSERNAME — not the normal Gmail password. Each person enters it in their own profile (protected values aren't committed to git). Set via double-click on this row.</description>
+      <initValue>''</initValue>
+      <name>GMAILAPPPASSWORD</name>
+      <protected>true</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

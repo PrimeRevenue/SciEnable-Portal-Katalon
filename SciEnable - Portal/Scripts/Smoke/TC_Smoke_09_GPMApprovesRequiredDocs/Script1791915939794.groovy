@@ -20,7 +20,8 @@ Onboarding.loginGpm()
 Onboarding.openSupplierAsGpm(company)
 
 // The dashboard may open on Required Documents already (it did when recorded); click it if offered.
-WebUI.click(Onboarding.byXpath('requiredDocsMenu', "//*[" + Onboarding.cls('user_side_page_link') + " and normalize-space(.)='Required Documents']"), FailureHandling.OPTIONAL)
+// GPM menu links have ids page_link_<n> (the number changes; self-healing found #page_link_220 on 10/14).
+WebUI.click(Onboarding.byXpath('requiredDocsMenu', "//*[starts-with(@id, 'page_link_') and normalize-space(.)='Required Documents']"), FailureHandling.OPTIONAL)
 WebUI.switchToFrame(itemFrame, 20)
 
 int approved = 0
@@ -29,6 +30,11 @@ for (int i = 0; i < 10 && WebUI.waitForElementVisible(inReview, 10, FailureHandl
     WebUI.click(approve)
     WebUI.click(back)
     approved++
+    // Right after "Back" the old page (with the just-approved document still "In Review") lingers for a
+    // moment; checking it then clicks a label that vanishes mid-click (10/14 suite run). Wait for the
+    // list to reload — it shows at least one "Ready to Send to Funder" once a document is approved.
+    WebUI.waitForElementNotPresent(back, 10, FailureHandling.OPTIONAL)
+    WebUI.waitForElementVisible(readyToSend, 10, FailureHandling.OPTIONAL)
 }
 
 if (approved == 0) {

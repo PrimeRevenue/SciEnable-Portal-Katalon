@@ -38,6 +38,26 @@ void verifyCompletedLabel() {
     WebUI.verifyElementPresent(byXpath('completedLabel', "//*[normalize-space(text())='Completed']"), 20)
 }
 
+// Platform Administrator / FDM: "Yes" prefills the form from the logged-in user, but not instantly —
+// saving 0.1s after Yes submitted an empty FDM form ("First Name is required", 10/14 suite run).
+// Wait until a text field has a value before saving.
+void clickYesAndSave(String name) {
+    WebUI.click(byXpath(name + 'Yes', "//*[" + cls('is-admin-buttons') + "]//*[" + cls('ant-btn-primary') + "]"))
+    boolean prefilled = false
+    for (int i = 0; i < 30 && !prefilled; i++) {
+        prefilled = WebUI.executeJavaScript(
+            "return Array.from(document.querySelectorAll('input[type=text], input:not([type])')).some(function (e) { return e.value.trim() !== '' })", null)
+        if (!prefilled) {
+            WebUI.delay(0.5)
+        }
+    }
+    if (!prefilled) {
+        KeywordUtil.markWarning(name + ': form was still empty 15s after clicking Yes')
+    }
+    WebUI.click(byXpath(name + 'Save', "//*[" + cls('ant-btn-primary') + " and " + cls('btn-submit') + "]"))
+    verifyCompletedLabel()
+}
+
 WebUI.openBrowser(null)
 
 WebUI.navigateToUrl('https://scienable-reg.aws.primerevenue.com')
@@ -65,15 +85,11 @@ verifyCompletedLabel()
 
 // 2. Platform Administrator: "Are you the Platform Administrator?" -> Yes -> Save (details prefilled)
 openItem('supplier_sa_creation', "//iframe[@id='tpa-frame']")
-WebUI.click(byXpath('tpaYes', "//*[" + cls('is-admin-buttons') + "]//*[" + cls('ant-btn-primary') + "]"))
-WebUI.click(byXpath('tpaSave', "//*[" + cls('ant-btn-primary') + " and " + cls('btn-submit') + "]"))
-verifyCompletedLabel()
+clickYesAndSave('tpa')
 
 // 3. Financial Decision Maker: Yes -> Save (details prefilled)
 openItem('supplier_fdm_creation', "//iframe[@id='fdm-frame']")
-WebUI.click(byXpath('fdmYes', "//*[" + cls('is-admin-buttons') + "]//*[" + cls('ant-btn-primary') + "]"))
-WebUI.click(byXpath('fdmSave', "//*[" + cls('ant-btn-primary') + " and " + cls('btn-submit') + "]"))
-verifyCompletedLabel()
+clickYesAndSave('fdm')
 
 // 4. My Preferences (payment preferences): acknowledge checkbox -> Save
 openItem('trading_preference', "//iframe[@scrolling='no']")

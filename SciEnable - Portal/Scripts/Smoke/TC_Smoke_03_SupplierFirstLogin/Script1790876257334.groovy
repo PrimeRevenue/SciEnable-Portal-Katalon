@@ -5,11 +5,24 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import smoke.GmailReader
 
 // SE-15102: supplier sets a password from the email link, accepts the privacy policy, lands on home.
-// setPasswordLink is a test case variable (Variables tab) until the test can read Gmail itself.
+// The link comes from the welcome email in the GMAILUSERNAME inbox (read over IMAP, inbox + Spam).
+// A link pasted into the setPasswordLink variable is used instead, for running this step on its own.
 // trim(): values pasted from Gmail can carry a hidden tab/line break.
 setPasswordLink = setPasswordLink?.trim()
+if (!setPasswordLink) {
+    String supplierEmail = GlobalVariable.smokeSupplierEmail
+    if (!supplierEmail) {
+        KeywordUtil.markFailedAndStop('Run via the smoke suite (to read the welcome email), or paste a Password Set Up link into the setPasswordLink variable')
+    }
+    // Each run's supplier has its own +alias address, so the recipient alone identifies the right
+    // email; the 6-hour window just keeps the search small.
+    setPasswordLink = GmailReader.waitForValue(GlobalVariable.GMAILUSERNAME, GlobalVariable.GMAILAPPPASSWORD,
+        supplierEmail, '', 'Password Set Up:\\s*(https://auth-reg\\.primerevenue\\.com/[^\\s"<>]+)',
+        new Date(System.currentTimeMillis() - 6L * 60 * 60 * 1000), 600)
+}
 if (!(setPasswordLink?.startsWith('https://auth-reg.primerevenue.com/'))) {
     KeywordUtil.markFailedAndStop('Paste a fresh Password Set Up / Reset Password link from the supplier email into the setPasswordLink variable first')
 }
@@ -28,7 +41,9 @@ WebUI.setText(findTestObject('Page_Regression - SCiEnable/input_Password'), Glob
 
 WebUI.setText(findTestObject('Page_Regression - SCiEnable/input_Confirm password'), GlobalVariable.smokeSupplierPassword)
 
-WebUI.click(findTestObject('Page_Regression - SCiEnable/button_Submit'))
+// The login page's button_Submit object (class "submit") doesn't match this page's button — self-healing
+// had to rescue it on 10/14 — so locate it by its label.
+WebUI.click(byXpath('setPasswordSubmit', "//button[normalize-space(.)='Submit']"))
 
 // Privacy acknowledgement
 WebUI.click(findTestObject('Page_SE/label_I agree to the processing of my personal d'))

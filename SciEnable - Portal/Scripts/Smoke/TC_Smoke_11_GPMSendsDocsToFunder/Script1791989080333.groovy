@@ -18,11 +18,13 @@ TestObject funderReview = Onboarding.byXpath('funderReview', "//*[" + Onboarding
 Onboarding.loginGpm()
 Onboarding.openSupplierAsGpm(company)
 
-WebUI.click(Onboarding.byXpath('requiredDocsMenu', "//*[" + Onboarding.cls('user_side_page_link') + " and normalize-space(.)='Required Documents']"), FailureHandling.OPTIONAL)
+// GPM menu links have ids page_link_<n> (the number changes; self-healing found #page_link_220 on 10/14).
+WebUI.click(Onboarding.byXpath('requiredDocsMenu', "//*[starts-with(@id, 'page_link_') and normalize-space(.)='Required Documents']"), FailureHandling.OPTIONAL)
 WebUI.switchToFrame(itemFrame, 20)
 
-// Step 9 must have run: documents are "Ready to Send to Funder" before sending.
+// Step 9 must have run: documents are "Ready to Send to Funder" before sending, none still "In Review".
 WebUI.verifyElementPresent(readyToSend, 20)
+WebUI.verifyElementNotPresent(Onboarding.byXpath('inReviewDoc', "//*[" + Onboarding.cls('yellow') + " and normalize-space(.)='In Review']"), 5)
 
 WebUI.click(sendDocuments)
 
