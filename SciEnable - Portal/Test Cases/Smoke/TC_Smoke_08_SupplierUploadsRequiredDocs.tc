@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke flow step 8 — mirrors Jira SE-15119: the supplier opens Required Documents, opens each KYC document, uploads a file (Data Files/smoke/smoke-test-document.pdf) and clicks Next; the uploaded document is then shown and downloadable. Needs a supplier that has finished step 3.</description>
+   <name>TC_Smoke_08_SupplierUploadsRequiredDocs</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1bea2afd-5264-4eb8-b817-69d00974d18b</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>c44b3db6-e893-41f2-a05b-c77c003df0f4</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description>Only for running this step on its own: the supplier's login email (supplier.scienable+smoke...@gmail.com). Leave blank in the suite — step 1's smokeSupplierEmail is used instead.</description>
+      <id>c44b3db6-e893-41f2-a05b-c77c003df0f4</id>
+      <masked>false</masked>
+      <name>supplierEmail</name>
+   </variable>
+</TestCaseEntity>

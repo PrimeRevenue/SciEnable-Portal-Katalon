@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_gpm_list_with_hover</name>
+   <tag></tag>
+   <elementGuidId>89a36640-986d-4c3c-909e-e92fe859e329</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' registered_tab ') and contains(concat(' ', normalize-space(@class), ' '), ' supplier_list ')]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' gpm_list_with_hover ')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>.registered_tab.supplier_list .gpm_list_with_hover</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>#register_supplier_user_9567 >> internal:role=link >> nth=0</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>e0534e46-2e89-4989-98c4-2a4c2ec76ca9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/manage/registration_validations/9567?p_id=453&amp;type=no</value>
+      <webElementGuid>7a787eb8-d4b7-4d63-af9d-7659e68ada9b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>gpm_list_with_hover</value>
+      <webElementGuid>99319e9c-6ca5-4fa5-99af-fc1ac46556e8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>parent</name>
+      <type>Main</type>
+      <value>md5.v1-29ab793dd19b232df26b02dfe2cd8304</value>
+      <webElementGuid>e25e90af-89eb-4f91-8a04-9653fd8984dc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' registered_tab ') and contains(concat(' ', normalize-space(@class), ' '), ' supplier_list ')]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' gpm_list_with_hover ')]</value>
+      <webElementGuid>3f38b73a-bcec-4d37-9740-3dba42ba9f48</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' registered_tab ') and contains(concat(' ', normalize-space(@class), ' '), ' supplier_list ')]//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' gpm_list_with_hover ')]</value>
+      <webElementGuid>f6c37c38-8eee-42f0-b7f9-69f47b3fad48</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/manage/registration_validations/9567?p_id=453&amp;type=no']</value>
+      <webElementGuid>a2c442e7-98fc-4c31-a73b-4a25b53b7728</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

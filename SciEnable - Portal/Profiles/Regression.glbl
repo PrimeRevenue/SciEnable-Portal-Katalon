@@ -60,4 +60,53 @@
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Smoke flow: set at runtime by TC_Smoke_01_SupplierRegistration (unique per run) and read by the later smoke steps. Only populated when the steps run together in the Smoke test suite.</description>
+      <initValue>''</initValue>
+      <name>smokeCompanyName</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Smoke flow: set at runtime by TC_Smoke_01_SupplierRegistration — a supplier.scienable+alias address unique per run.</description>
+      <initValue>''</initValue>
+      <name>smokeSupplierEmail</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Smoke flow GPM (SE-15100). gpm.scienable, confirmed by Danniecia 10/1/2026 as the Regression GPM (SE-15100 itself lists a QA-env GPM, sapnagpm1).</description>
+      <initValue>'gpm.scienable@gmail.com'</initValue>
+      <name>smokeGpmEmail</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Smoke flow GPM password. Set this yourself in Katalon's profile editor.</description>
+      <initValue>''</initValue>
+      <name>smokeGpmPassword</name>
+      <protected>true</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Smoke flow: password the new supplier sets on the Change Password page (SE-15102 step 3). Set this yourself in Katalon's profile editor.</description>
+      <initValue>''</initValue>
+      <name>smokeSupplierPassword</name>
+      <protected>true</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Gmail inbox the smoke suppliers' emails go to (all supplier.scienable+smoke... aliases deliver here). Read over IMAP by Keywords/smoke/GmailReader. Names follow Katalon's OTP guide.</description>
+      <initValue>'supplier.scienable@gmail.com'</initValue>
+      <name>GMAILUSERNAME</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Google App Password (16 characters) for GMAILUSERNAME — not the normal Gmail password. Each person enters it in their own profile (protected values aren't committed to git). Set via double-click on this row.</description>
+      <initValue>''</initValue>
+      <name>GMAILAPPPASSWORD</name>
+      <protected>true</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

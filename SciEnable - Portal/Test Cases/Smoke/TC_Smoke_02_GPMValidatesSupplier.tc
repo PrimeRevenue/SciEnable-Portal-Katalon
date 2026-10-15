@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke flow step 2 — mirrors Jira SE-15100: GPM logs in, selects the program group (outlook program), opens the Registered tab, selects the supplier registered in step 1 (GlobalVariable.smokeCompanyName), clicks Validate, and sees the success message. Post-condition: supplier moves to the Onboarding tab.</description>
+   <name>TC_Smoke_02_GPMValidatesSupplier</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c9638a62-8733-4f37-8fc3-8ce4485c7287</testCaseGuid>
+</TestCaseEntity>
