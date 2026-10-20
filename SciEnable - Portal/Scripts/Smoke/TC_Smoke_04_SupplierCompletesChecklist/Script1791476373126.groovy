@@ -5,6 +5,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import smoke.Onboarding
 
 // SE-15103: supplier completes Company Details, Platform Administrator, Financial Decision Maker
 // and My Preferences (payment preferences). Each item's form loads in its own iframe; the recorded
@@ -58,15 +59,8 @@ void clickYesAndSave(String name) {
     verifyCompletedLabel()
 }
 
-WebUI.openBrowser(null)
-
-WebUI.navigateToUrl('https://scienable-reg.aws.primerevenue.com')
-
-WebUI.setText(findTestObject('Page_Regression - SCiEnable/input_Email'), email)
-
-WebUI.setText(findTestObject('Page_Regression - SCiEnable/input_Password'), GlobalVariable.smokeSupplierPassword)
-
-WebUI.click(findTestObject('Page_Regression - SCiEnable/button_Submit'))
+// Shared login (also enters a two-factor code from Gmail if the supplier is asked for one).
+Onboarding.loginSupplier(email)
 
 // 1. Company Details: a two-page form inside company-detail-frame. Page 1 is an info box with a
 // "Next" button (confirmed 10/9); page 2 has State/Province of Incorporation + tax ID and a primary

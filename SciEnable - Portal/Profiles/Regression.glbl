@@ -109,4 +109,11 @@
       <protected>true</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Google App Password for the GPM's own Gmail (smokeGpmEmail, gpm.scienable@gmail.com) — used to read its two-factor login codes when MFA is on. Each person enters it in their own profile. Set via double-click on this row.</description>
+      <initValue>''</initValue>
+      <name>GPMGMAILAPPPASSWORD</name>
+      <protected>true</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

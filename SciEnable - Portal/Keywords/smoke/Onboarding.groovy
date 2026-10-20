@@ -3,6 +3,7 @@ package smoke
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import com.kms.katalon.core.annotation.Keyword
+import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.util.KeywordUtil
@@ -44,8 +45,39 @@ class Onboarding {
 		WebUI.setText(findTestObject('Page_Regression - SCiEnable/input_Email'), email)
 		// setText, not setEncryptedText: protected variables arrive as plain text at runtime.
 		WebUI.setText(findTestObject('Page_Regression - SCiEnable/input_Password'), GlobalVariable.smokeSupplierPassword)
+		Date submittedAt = new Date()
 		WebUI.click(findTestObject('Page_Regression - SCiEnable/button_Submit'))
+		// Smoke suppliers' +alias addresses all deliver to the GMAILUSERNAME inbox.
+		passTwoFactorIfAsked(email, GlobalVariable.GMAILUSERNAME, GlobalVariable.GMAILAPPPASSWORD, submittedAt)
 	}
+
+	/**
+	 * If the login asks for a two-factor code (MFA turned on for the account), reads the code from
+	 * the account's Gmail and enters it; otherwise does nothing. The page (seen 10/8): "Two-factor
+	 * Code" box, "Trust this computer for 30 days" (useless here, every run uses a fresh browser), Verify.
+	 */
+	static void passTwoFactorIfAsked(String accountEmail, String gmailUser, String gmailAppPassword, Date submittedAt) {
+		TestObject codeInput = byXpath('twoFactorCode', "//input[@placeholder='Two-factor Code']")
+		if (!WebUI.waitForElementVisible(codeInput, 10, FailureHandling.OPTIONAL)) {
+			return
+		}
+		if (!gmailAppPassword) {
+			KeywordUtil.markFailedAndStop("${accountEmail} asked for a two-factor code, but there's no Gmail app password to read it with — set it in the Regression profile")
+		}
+		// Only emails received after this login's Submit (5s grace for clock differences), so a code
+		// from an earlier step's login a few seconds before can't be picked up.
+		String code = GmailReader.waitForValue(gmailUser, gmailAppPassword, accountEmail, TWO_FACTOR_SUBJECT,
+				TWO_FACTOR_REGEX, submittedAt, 180, 5)
+		WebUI.setText(codeInput, code)
+		WebUI.click(byXpath('twoFactorVerify', "//button[normalize-space(.)='Verify']"))
+		if (!WebUI.waitForElementNotPresent(codeInput, 15, FailureHandling.OPTIONAL)) {
+			KeywordUtil.markFailedAndStop("Two-factor code for ${accountEmail} was not accepted")
+		}
+	}
+
+	// TODO confirm from a real code email: subject text and the code's format (assumed 6 digits).
+	static final String TWO_FACTOR_SUBJECT = ''
+	static final String TWO_FACTOR_REGEX = '(?<![0-9])([0-9]{6})(?![0-9])'
 
 	/**
 	 * The supplier company to act on: step 1's smokeCompanyName in a suite run, otherwise the test's
@@ -67,7 +99,10 @@ class Onboarding {
 		WebUI.navigateToUrl('https://scienable-reg.aws.primerevenue.com')
 		WebUI.setText(findTestObject('Page_Regression - SCiEnable/input_Email'), GlobalVariable.smokeGpmEmail)
 		WebUI.setText(findTestObject('Page_Regression - SCiEnable/input_Password'), GlobalVariable.smokeGpmPassword)
+		Date submittedAt = new Date()
 		WebUI.click(findTestObject('Page_Regression - SCiEnable/button_Submit'))
+		// gpm.scienable is itself a Gmail address, with its own app password.
+		passTwoFactorIfAsked(GlobalVariable.smokeGpmEmail, GlobalVariable.smokeGpmEmail, GlobalVariable.GPMGMAILAPPPASSWORD, submittedAt)
 	}
 
 	/**

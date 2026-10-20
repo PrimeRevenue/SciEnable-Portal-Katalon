@@ -27,16 +27,18 @@ class GmailReader {
 
 	/**
 	 * Waits for an email sent to `recipient` whose subject contains `subjectContains`, received at or
-	 * after `since`, checking the inbox and Spam every 10 seconds until `timeoutSeconds`. Returns
-	 * capture group 1 of `regex` from the newest matching email's text; fails the test on timeout.
+	 * after `since` (less `graceSeconds`, for clock differences), checking the inbox and Spam every
+	 * 10 seconds until `timeoutSeconds`. Returns capture group 1 of `regex` from the newest matching
+	 * email's text; fails the test on timeout.
 	 */
 	@Keyword
 	static String waitForValue(String gmailUser, String appPassword, String recipient, String subjectContains,
-			String regex, Date since, int timeoutSeconds = 300) {
+			String regex, Date since, int timeoutSeconds = 300, int graceSeconds = 60) {
 		Pattern pattern = Pattern.compile(regex)
+		Date from = new Date(since.time - graceSeconds * 1000L)
 		long deadline = System.currentTimeMillis() + timeoutSeconds * 1000L
 		while (true) {
-			String value = findValue(gmailUser, appPassword, recipient, subjectContains, pattern, since)
+			String value = findValue(gmailUser, appPassword, recipient, subjectContains, pattern, from)
 			if (value != null) {
 				KeywordUtil.logInfo("Found email for ${recipient} ('${subjectContains}')")
 				return value
@@ -68,7 +70,7 @@ class GmailReader {
 				try {
 					for (Message m : folder.search(new ReceivedDateTerm(ComparisonTerm.GE, dayStart))) {
 						Date received = m.receivedDate
-						if (received == null || received.before(new Date(since.time - 60000))) {
+						if (received == null || received.before(since)) {
 							continue
 						}
 						if (!(m.subject ?: '').toLowerCase().contains(subjectContains.toLowerCase())) {

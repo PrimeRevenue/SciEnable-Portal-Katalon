@@ -4,6 +4,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import smoke.Onboarding
 
 // SE-15100: GPM validates the supplier registered by TC_Smoke_01 (run them together in TS_Smoke).
 String companyName = GlobalVariable.smokeCompanyName
@@ -17,20 +18,10 @@ TestObject byXpath(String name, String xpath) {
     return to
 }
 
-WebUI.openBrowser(null)
-
-// Opening the auth-reg authorize URL directly (as recorded) doesn't show the login form; the app
-// root redirects to it properly.
-WebUI.navigateToUrl('https://scienable-reg.aws.primerevenue.com')
-
-WebUI.setText(findTestObject('Page_Regression - SCiEnable/input_Email'), GlobalVariable.smokeGpmEmail)
-
-// setText, not setEncryptedText: a protected profile variable already arrives here as plain text
-// (Katalon 11 decrypts it from its secure store). setEncryptedText would base64-decode it again —
-// "Illegal base64 character 21" when the password contains '!' (failed live 10/6/2026).
-WebUI.setText(findTestObject('Page_Regression - SCiEnable/input_Password'), GlobalVariable.smokeGpmPassword)
-
-WebUI.click(findTestObject('Page_Regression - SCiEnable/button_Submit'))
+// Opens the app root (the recorded auth-reg authorize URL doesn't show the login form), logs in
+// with setText (protected variables arrive as plain text; setEncryptedText failed with
+// "Illegal base64 character 21", 10/6), and enters the two-factor code from Gmail if MFA is on.
+Onboarding.loginGpm()
 
 // Program group, found by its name (the recorded locator depended on its position on the page).
 WebUI.click(byXpath('programOutlook', "//*[contains(concat(' ', normalize-space(@class), ' '), ' user_side_page_link ') and normalize-space(.)='outlook program']"))
