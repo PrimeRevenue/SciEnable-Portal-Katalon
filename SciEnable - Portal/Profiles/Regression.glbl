@@ -75,6 +75,13 @@
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
+      <description>Smoke flow: Desired Program picked at registration (step 1), exactly as it appears in the list. It decides the bank flow (Sapna, 10/20): OutlookBuyer = traditional bank account, outlookauthorizeflow = digital (Plaid; heard as &quot;OutlookOverUsed&quot;, name taken from the registration dropdown 10/20).</description>
+      <initValue>'outlookauthorizeflow'</initValue>
+      <name>smokeDesiredProgram</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
       <description>Smoke flow GPM (SE-15100). gpm.scienable, confirmed by Danniecia 10/1/2026 as the Regression GPM (SE-15100 itself lists a QA-env GPM, sapnagpm1).</description>
       <initValue>'gpm.scienable@gmail.com'</initValue>
       <name>smokeGpmEmail</name>

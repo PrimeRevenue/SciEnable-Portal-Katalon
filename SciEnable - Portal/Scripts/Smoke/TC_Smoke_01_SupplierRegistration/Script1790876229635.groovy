@@ -9,6 +9,7 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
@@ -55,7 +56,11 @@ WebUI.selectOptionByLabel(findTestObject('Old Registration/select_Currency'), 'U
 
 WebUI.click(findTestObject('Old Registration/input_DesiredProgramSearch'))
 
-WebUI.click(findTestObject('Old Registration/li_DesiredProgram_OutlookBuyer'))
+// The program decides the bank flow (Sapna, 10/20): OutlookBuyer = traditional bank account,
+// outlookauthorizeflow = digital (Plaid). Chosen by the smokeDesiredProgram profile variable.
+String desiredProgram = GlobalVariable.smokeDesiredProgram ?: 'OutlookBuyer'
+WebUI.click(new TestObject('desiredProgram').addProperty('xpath', ConditionType.EQUALS,
+    "//ul[@class='chosen-results']/li[normalize-space(text())='" + desiredProgram + "']"))
 
 WebUI.setText(findTestObject('Old Registration/input_Question1'), 'Test')
 
