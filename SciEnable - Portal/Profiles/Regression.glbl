@@ -82,14 +82,14 @@
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Smoke flow GPM (SE-15100). gpm.scienable, confirmed by Danniecia 10/1/2026 as the Regression GPM (SE-15100 itself lists a QA-env GPM, sapnagpm1).</description>
-      <initValue>'gpm.scienable@gmail.com'</initValue>
+      <description>Smoke flow GPM (SE-15100). gpm1.scienable: a GPM user set up for automation by Sapna 10/20 (has outlook program), on its own Gmail so the tests can read its MFA codes — Google locked everyone out of gpm.scienable's Gmail. Was gpm.scienable until 10/21 (still used by the feature-flag tests via ffOnSupplierEmail). SE-15100 itself lists a QA-env GPM, sapnagpm1.</description>
+      <initValue>'gpm1.scienable@gmail.com'</initValue>
       <name>smokeGpmEmail</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Smoke flow GPM password. Set this yourself in Katalon's profile editor.</description>
+      <description>Smoke flow GPM password: the SCiEnable login for smokeGpmEmail (not its Gmail password). Set this yourself in Katalon's profile editor.</description>
       <initValue>''</initValue>
       <name>smokeGpmPassword</name>
       <protected>true</protected>
@@ -117,7 +117,7 @@
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Google App Password for the GPM's own Gmail (smokeGpmEmail, gpm.scienable@gmail.com) — used to read its two-factor login codes when MFA is on. Each person enters it in their own profile. Set via double-click on this row.</description>
+      <description>Google App Password for the GPM's own Gmail (smokeGpmEmail, gpm1.scienable@gmail.com) — used to read its two-factor login codes when MFA is on. Each person enters it in their own profile. Set via double-click on this row.</description>
       <initValue>''</initValue>
       <name>GPMGMAILAPPPASSWORD</name>
       <protected>true</protected>
