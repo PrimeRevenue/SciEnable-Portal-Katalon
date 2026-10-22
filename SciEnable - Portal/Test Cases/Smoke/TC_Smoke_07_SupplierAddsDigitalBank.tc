@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Smoke flow step 7 — mirrors Jira SE-17827: the supplier opens Bank Account Information, adds a USA bank account through Plaid (sandbox bank), fills in the bank address, authorizes it and attaches a supporting document; the account is then listed In Review. Digital bank flow only, so it needs smokeDesiredProgram = outlookauthorizeflow (skipped otherwise). Needs a supplier that has finished step 3; runs once per supplier.</description>
+   <name>TC_Smoke_07_SupplierAddsDigitalBank</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>97f07476-6565-4048-a214-8062bdecece8</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description>Only for running this step on its own: the supplier's login email (supplier.scienable+smoke...@gmail.com). Leave blank in the suite — step 1's smokeSupplierEmail is used instead.</description>
+      <id>5b0d7c2e-8a4f-4c1e-9d3b-2f6a7e1c4d90</id>
+      <masked>false</masked>
+      <name>supplierEmail</name>
+   </variable>
+</TestCaseEntity>

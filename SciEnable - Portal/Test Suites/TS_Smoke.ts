@@ -44,6 +44,12 @@
       <testCaseId>Test Cases/Smoke/TC_Smoke_05_SupplierAcceptsLegalAgreement</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>e3a9c1d4-6b7f-4a2e-8c5d-1f0b9e7a3c62</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Smoke/TC_Smoke_07_SupplierAddsDigitalBank</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>7f0824ee-5916-4db5-b7c7-7b47db36aa38</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
